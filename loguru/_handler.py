@@ -259,7 +259,9 @@ class Handler:
                 "Verify that the format string %r only references valid record keys "
                 "and that all required extra keys are present.\n"
                 "Available records key are: %s.\n"
-                "To include custom data, use `logger.bind(key=value)` and reference it "
+                "While using a dynamic formatter as a function, note that it must return "
+                "the string to be formatted, not an already formatted message.\n"
+                "To include custom data, use 'logger.bind(key=value)' and reference it "
                 "as '{extra[key]}' in the format string." % (e, log_format, available)
             ) from e
 
